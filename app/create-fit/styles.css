@@ -1,0 +1,88 @@
+.main-create-fit {
+  animation: fadeIn 2s;
+  background: rgb(17, 17, 17);
+  /* padding: 50px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: white;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0%;
+  } to {
+      opacity: 100%;
+  }
+}
+
+.flexbox {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+.sec1 {
+  width: 50%;
+  display: flex;
+  align-items:baseline;
+  justify-content: center;
+  width: fit-content;
+}
+
+.sec2 {
+  width: fit-content;
+}
+
+.sec1 > div > div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  justify-content: center;
+}
+
+.sec1 > div > div > h1 {
+  font-size: 2.5vh;
+}
+
+.sec1 > div > div > h3 {
+  font-size: 1.5vh;
+  opacity: 60%;
+}
+
+.sec1 > div > div > input {
+  border-bottom: 1px solid rgb(69, 69, 69);
+  margin-bottom: 40px;
+  outline: none;
+  padding-bottom: 2px;
+  /* margin-top: 5px; */
+  width: 80%;
+}
+
+.sec2 {
+  border: 1px solid rgb(35, 35, 35);
+  border-radius: 10px;
+  height: 70vh;
+  width: 50vh;
+  border-style: dashed;
+}
+
+.sec1 > div > div > div {
+  display: flex;
+  gap: 4;
+  margin-top: 5px;
+}
+
+.button-gender {
+  width: 50%;
+  padding: 8px 0px 8px 0px;
+  border-radius: 5px;
+}
+
+.generate {
+  background: white;
+
+}
