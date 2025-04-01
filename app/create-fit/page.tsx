@@ -13,9 +13,9 @@ function Page() {
 
   const fetchImages = async () => {
     //Building query
-    const top = document.getElementById("top")?.value;
-    const bottom = document.getElementById("bottom")?.value;
-    const outerwear = document.getElementById("outerwear")?.value;
+    const top = (document.getElementById("top") as HTMLInputElement).value;
+    const bottom = (document.getElementById("bottom") as HTMLInputElement).value;
+    const outerwear = (document.getElementById("outerwear") as HTMLInputElement).value;
     if (!top || !bottom || !outerwear) return;
 
     setQuery(`${top}, ${bottom}, ${outerwear}, ${gender}`);
