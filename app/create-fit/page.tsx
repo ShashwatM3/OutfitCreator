@@ -18,17 +18,18 @@ function Page() {
     const outerwear = document.getElementById("outerwear")?.value;
     if (!top || !bottom || !outerwear) return;
 
-    const query = `${top}, ${bottom}, ${outerwear}, ${gender}`;
-    console.log(query);
-
+    setQuery(`${top}, ${bottom}, ${outerwear}, ${gender}`);
     setLoading(true);
     setError(null);
+    console.log(loading);
+    console.log(error);
 
     try {
         const response = await fetch(`/api/pinterest?query=${encodeURIComponent(query)}`);
         const data = await response.json();
         if (response.ok) {
             setImages(data.images);
+            console.log(images);
         } else {
             setError(data.error || 'Failed to fetch images');
         }
