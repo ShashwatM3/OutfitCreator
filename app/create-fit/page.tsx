@@ -34,7 +34,7 @@ function Page() {
             setError(data.error || 'Failed to fetch images');
         }
     } catch (err) {
-        setError('An error occurred');
+        setError('An error occurred ' + err);
     }
 
     setLoading(false);
